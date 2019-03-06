@@ -1,0 +1,6 @@
+.phone-book {
+  max-width: 100%;
+  background: silver; }
+
+.phone-book__cell {
+  max-width: 25%; }
