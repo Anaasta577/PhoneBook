@@ -1,51 +1,52 @@
-(function () {
+function getRandom(num, min) {
+    return typeof min === "undefined" ? Math.floor(Math.random() * num)
+        : Math.floor(Math.random() * num) + min;
+}
 
-    const getRandom = (num,min=0) => Math.floor(Math.random()*num) + min;
+function getFirtsName() {
+    var names = ['Andre', 'Ronald', 'Lauren', 'Liana', 'Jaelyn', 'Lexie', 'Felicia', 'Carla', 'Deshaun'];
+    return names[getRandom(names.length)];
+};
 
-    const getFirtsName = () => {
-        const names = ['Andre','Ronald','Lauren','Liana','Jaelyn','Lexie','Felicia','Carla','Deshaun'];
-        return names[getRandom(names.length)];
-    };
+function getLastName() {
+    var lastNames = ['Ziegler', 'Black', 'OKeefe', 'Doyle', 'Gibbs', 'Wagner', 'Meredith', 'Anderson'];
+    return lastNames[getRandom(lastNames.length)];
+};
 
-    const getLastName = () => {
-        const lastNames = ['Ziegler','Black','OKeefe','Doyle','Gibbs','Wagner','Meredith','Anderson'];
-        return lastNames[getRandom(lastNames.length)];
-    };
+function getPhone() {
+    return '+ ' + getRandom(999,1) + '(' + getRandom(900, 100) + ')' + ' ' +getRandom(900,100) +'-'+ getRandom(9000,1000);
+};
 
-    const getPhone = () => {
-        let number  = getRandom(90000000000,10000000000);
-        number +='';
-        let [a1,a2,a3,a4,a5,a6,a7,a8,a9,a10,a11] = number;
-        return `+${a1} (${a2}${a3}${a4}) ${a5}${a6}${a7} - ${a8}${a9}${a10}${a11}` ;
-    };
-
-    const getZip = () => getRandom(900000,100000);
+function getZip() {
+   return getRandom(900000, 100000);
+}
 
 
-    function Person (firstName,lastName,phoneNumber,zipCode) {
-            this.firstName = firstName;
-            this.lastName = lastName;
-            this.phoneNumber = phoneNumber;
-            this.zipCode = zipCode;
-        }
-    const countPerson = 30;
-    const phoneBook = [];
-    for (let i  = 0; i<countPerson;i++) {
-        phoneBook.push(new Person(getFirtsName(),getLastName(),getPhone(),getZip()))
-    }
+function Person(firstName, lastName, phoneNumber, zipCode) {
+    this.firstName = firstName;
+    this.lastName = lastName;
+    this.phoneNumber = phoneNumber;
+    this.zipCode = zipCode;
+}
 
-    const templateRow= document.getElementById('table-row');
-    const table = document.querySelector('.phone-book__table');
+var countPerson = 100;
+var phoneBook = [];
+for (var i = 0; i < countPerson; i++) {
+    phoneBook.push(new Person(getFirtsName(), getLastName(), getPhone(), getZip()))
+}
 
-    phoneBook.forEach( (person) => {
-        let newRow = templateRow.content.cloneNode(true);
-        let allFields = newRow.querySelectorAll('.phone-book__cell');
-        allFields[0].textContent = person.firstName;
-        allFields[1].textContent = person.lastName;
-        allFields[2].textContent = person.phoneNumber;
-        allFields[3].textContent = person.zipCode;
+var table = document.querySelector('.phone-book');
+var tableContent = document.createDocumentFragment();
+phoneBook.forEach(function (person) {
+    var templateRow = document.createElement("tr");
+    templateRow.className = "phone-book__row";
+    templateRow.innerHTML =
+        '<td class="phone-book__cell">' + person.firstName + '</td>' +
+        '<td class="phone-book__cell">' + person.lastName + '</td>' +
+        '<td class="phone-book__cell">' + person.phoneNumber + '</td>' +
+        '<td class="phone-book__cell">' + person.zipCode + '</td>';
+    console.log(templateRow);
+    tableContent.appendChild(templateRow);
+});
 
-        table.appendChild(newRow);
-
-    });
-})();
+table.appendChild(tableContent);
