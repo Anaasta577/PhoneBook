@@ -17,13 +17,14 @@ ul {
   padding: 0;
   margin: 0; }
 
-.wrapper {
-  min-height: 100%; }
+a {
+  text-decoration: none;
+  color: black; }
 
 .container {
   margin: 0 auto;
   max-width: 960px;
-  padding: 15px; }
+  padding: 0 15px; }
 
 /*! normalize.css v4.1.1 | MIT License | github.com/necolas/normalize.css */
 /**
@@ -395,12 +396,13 @@ textarea {
   font: inherit;
   /* 2 */ }
 
-.page__title {
-  font-size: 35px;
-  font-weight: 300; }
+.page-title {
+  font-size: 33px;
+  font-weight: 300;
+  padding: 20px 0; }
 
 .phone-book {
-  padding-bottom: 60px; }
+  padding-bottom: 30px; }
 
 .phone-book {
   width: 100%;
@@ -419,3 +421,18 @@ textarea {
   text-align: left;
   padding-bottom: 15px;
   border: 0; }
+
+.navigation__item {
+  display: inline-block; }
+
+.navigation__link {
+  padding: 8px 18px;
+  border-radius: 5px;
+  width: 120px; }
+  .navigation__link:hover {
+    background: #72c6ff;
+    color: white; }
+
+.navigation__link--active {
+  background: #8f8f8f;
+  color: white; }

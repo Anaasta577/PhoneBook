@@ -5,7 +5,7 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <!--<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="src/styles/main.css">
     <title>Phone book</title>
 </head>
@@ -13,10 +13,10 @@
 
 <div class="wrapper">
     <div class="container">
-        <h2 class="page-title">
+        <div class="page-title">
             Phone book
-        </h2>
-        <table class="phone-book">
+        </div>
+        <table class="phone-book container__phone-book">
             <tr class="phone-book__row--title">
                 <th class="phone-book__cell phone-book__cell--title">First name</th>
                 <th class="phone-book__cell phone-book__cell--title">Last name</th>
@@ -24,6 +24,35 @@
                 <th class="phone-book__cell phone-book__cell--title">ZIP-code</th>
             </tr>
         </table>
+
+        <ul class="navigation container__navigation">
+
+            <li class="navigation__item">
+                <a href="#!" class="navigation__link" id="button_previous">
+                    < <!--<i class="fa fa-angle-left " aria-hidden="true"></i>-->
+                </a>
+            </li>
+            <li class="navigation__item">
+                <a href="#!" class="navigation__link navigation__link--active">1</a>
+            </li>
+            <li class="navigation__item">
+                <a href="#!" class="navigation__link">2</a>
+            </li>
+            <li class="navigation__item">
+                <a href="#!" class="navigation__link ">3</a>
+            </li>
+            <li class="navigation__item">
+                <a href="#!" class="navigation__link">4</a>
+            </li>
+
+            <li class="navigation__item">
+                <a href="#!" class="navigation__link" id="button_next">
+                    > <!--<i class="fa fa-angle-right" aria-hidden="true"></i>-->
+                </a>
+            </li>
+
+
+        </ul>
     </div>
 </div>
 
