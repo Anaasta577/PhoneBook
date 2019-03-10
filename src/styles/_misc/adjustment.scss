@@ -5,6 +5,7 @@ body, html {
 
 html {
   font-size: 16px;
+  //overflow:  hidden;
 }
 
 body {
@@ -21,13 +22,22 @@ ul {
   margin: 0;
 }
 
+a {
+  text-decoration: none;
+  color: black;
+}
+
 .wrapper {
-  min-height: 100%;
+  //min-height: 100%;
 }
 
 .container {
   margin: 0 auto;
   max-width: 960px;
-  padding: 15px;
+  padding: 0 15px;
+}
+
+.container__navigation {
+  //margin-bottom: 30px;
 }
 
