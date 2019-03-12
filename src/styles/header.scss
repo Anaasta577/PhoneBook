@@ -1,0 +1,12 @@
+.header {
+  @include clearfix;
+}
+
+.header__page-title {
+  float: left;
+}
+
+.header__search {
+  padding-top: 60px;
+  float: right;
+}

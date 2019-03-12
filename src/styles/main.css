@@ -396,6 +396,18 @@ textarea {
   font: inherit;
   /* 2 */ }
 
+.header:after {
+  content: "";
+  display: block;
+  clear: both; }
+
+.header__page-title {
+  float: left; }
+
+.header__search {
+  padding-top: 60px;
+  float: right; }
+
 .page-title {
   font-size: 33px;
   font-weight: 300;

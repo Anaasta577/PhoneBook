@@ -13,9 +13,16 @@
 
 <div class="wrapper">
     <div class="container">
-        <div class="page-title">
-            Phone book
-        </div>
+        <header class="header">
+            <div class="page-title header__page-title">
+                Phone book
+            </div>
+            <div class="search header__search">
+                <input type="text" class="search__field" placeholder = "search">
+            </div>
+        </header>
+
+
         <table class="phone-book container__phone-book">
             <tr class="phone-book__row--title">
                 <th class="phone-book__cell phone-book__cell--title">First name</th>
@@ -26,31 +33,6 @@
         </table>
 
         <ul class="navigation container__navigation">
-
-            <li class="navigation__item">
-                <a href="#!" class="navigation__link" id="button_previous">
-                    < <!--<i class="fa fa-angle-left " aria-hidden="true"></i>-->
-                </a>
-            </li>
-            <li class="navigation__item">
-                <a href="#!" class="navigation__link navigation__link--active">1</a>
-            </li>
-            <li class="navigation__item">
-                <a href="#!" class="navigation__link">2</a>
-            </li>
-            <li class="navigation__item">
-                <a href="#!" class="navigation__link ">3</a>
-            </li>
-            <li class="navigation__item">
-                <a href="#!" class="navigation__link">4</a>
-            </li>
-
-            <li class="navigation__item">
-                <a href="#!" class="navigation__link" id="button_next">
-                    > <!--<i class="fa fa-angle-right" aria-hidden="true"></i>-->
-                </a>
-            </li>
-
 
         </ul>
     </div>
